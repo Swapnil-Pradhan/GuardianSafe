@@ -1,0 +1,103 @@
+#sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3ch;
+    flex-direction: column;
+}
+
+#sign legend {
+    font-size: x-large;
+    background-color: rgba(126, 214, 223, .2);
+    border-radius: 69px;
+    padding: .5ch;
+    color: rgb(214, 226, 227) !important;
+}
+
+#sign> div > fieldset {
+    border-radius: 33px;
+    border: 0;
+    background-color: rgba(0, 0, 0, .5);
+    width: min-content;
+    height: 0;
+    overflow-y: hidden;
+    transition-timing-function: ease-out;
+}
+
+#sign>div>fieldset::-webkit-scrollbar {
+    display: none;
+}
+
+#sign input {
+    margin: .5ch;
+    text-align: left;
+}
+
+#sign form {
+    margin-top: 1ch;
+}
+
+#signin:focus-within {
+    height: 13em;
+    overflow: visible;
+}
+
+#register:focus-within {
+    height: 19em;
+    overflow: visible;
+}
+
+input:focus {
+    border-bottom: 2px solid rgba(126, 214, 223, 1);
+}
+
+.loginBtns {
+    border-radius: 45px 45px 0 0;
+    padding: 3ch 2ch;
+    background-image: linear-gradient(to bottom, black, transparent);
+    margin: 5ch 5ch 0 5ch;
+    position: relative;
+}
+
+.loginBtns::before {
+    content: "Or Log In with:";
+    position: absolute;
+    top: 0;
+    padding: 1ch;
+    margin-top: -2ch;
+    border-radius: 69px;
+    background-color: darkslategray;
+    color: var(--text);
+
+}
+
+#yahoo[before]::before {
+    color: #a530ff;
+    font-style: italic;
+}
+
+#yahoo::after {
+    content: "!";
+    font-style: italic;
+    font-weight: bolder;
+}
+
+button img {
+    aspect-ratio: 1/1;
+    height: 1.4em;
+    transform: translateY(.1ch);
+    border-radius: 69px;
+}
+
+#microsoft img {
+    border-radius: 69px 0 0 69px;
+}
+
+[before]:hover::before,
+button:hover img {
+    transform: translateX(-50%);
+    background-color: snow;
+    scale: 1.2;
+    box-shadow: snow 0px 0px 12px;
+    margin-top: 0;
+}
